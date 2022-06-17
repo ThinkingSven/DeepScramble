@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-
+import Scrambler from "./Scrambler";
 function Timer() {
   const [thetimer, setTimer] = useState(0);
   const [timerOn, setTimerOn] = useState(false);
@@ -8,7 +8,7 @@ function Timer() {
   function handleReset() {
     setTimer(0)
     setTimerOn(false)
-    setScramble("U' R F B' R' U2 R U D F R2 F2 U2 B L2 B R2 B' R2 B D2")
+    setScramble("new Scramble")
     setShowStart(true);
   }
 
@@ -30,11 +30,11 @@ function Timer() {
   return (
     <div>
       <h1>{Math.round(thetimer/1000)}s</h1>
-      <p>{scramble}</p>
       {showStart ?  <button onClick={() => setTimerOn(true)}>Start</button> : <></> }
       <button onClick={() => setTimerOn(false)}>Stop</button>
       {timerOn ? <></> : <button onClick={handleReset}>Next Solve</button>}
 
+      <Scrambler/>
     </div>
   );
 }
