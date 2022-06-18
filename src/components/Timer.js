@@ -4,7 +4,7 @@ function Timer() {
   const [thetimer, setTimer] = useState(0);
   const [timerOn, setTimerOn] = useState(false);
   const [showStart, setShowStart] = useState(true);
-  const [scramble, setScramble] = useState("L' R2 F2 L' F2 D2 R B2 F2 D2 F D' L2 F2 D R F' L'")
+  const [scramble, setScramble] = useState()
   function handleReset() {
     setTimer(0)
     setTimerOn(false)
